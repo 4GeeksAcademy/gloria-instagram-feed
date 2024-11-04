@@ -4,173 +4,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Instagram Feed with Bootstrap</title>
+    <title>Instagram Feed con Bootstrap</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
 </head>
 
 <body>
-    <!-- navar -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <!-- Menu principal -->
+    <nav class="navbar navbar-light bg-light py-3">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Dropdown
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <div class="d-flex w-100 justify-content-between">
+                <div>
+                    <i class="fa-brands fa-instagram fa-xl"></i>
+                    <h5 class="d-inline-block fs-5">Instagram</h5>
+                </div>
+                <div class="d-flex align-right justify-content-end">
+
+                    <!-- Boton con menu desplegable -->
+                    <button type="button" class="btn btn-success me-2" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal">
+                        Create a new post
+                    </button>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-gear"></i>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="#">Profile</a></li>
+                            <li><a class="dropdown-item" href="#">Accesibility</a></li>
+                            <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
                         </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-                    </li>
-                </ul>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
+                    </div>
+                </div>
             </div>
         </div>
     </nav>
-    <!-- seccion body  -->
-    <ul class="nav nav-tabs" id="myTab" role="tablist">
-        <li class="nav-item" role="presentation">
-            <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane"
-                type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true"><i
-                    class="fa-solid fa-table-cells"></i></button>
-        </li>
-        <li class="nav-item" role="presentation">
-            <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane"
-                type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false"><i
-                    class="fa-solid fa-square"></i></button>
-        </li>
-    </ul>
-    <div class="tab-content" id="myTabContent">
-        <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab"
-            tabindex="0">
-            <!-- seccion 1 del body -->
 
-            <div class="tab-pane fade show active overflow-hidden" id="home" role="tabpanel" aria-labelledby="home-tab">
-                <div class="row">
-                    <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;"
-                            src="https://cdn.goconqr.com/uploads/media/image/30486095/desktop_fcc362e8-1fbd-4e65-aa46-ae9964aec20d.jpg"
-                            class="img-fluid w-100" alt=""></div>
-                    <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;"
-                            src="https://img.freepik.com/fotos-premium/cientifico-que-trabaja-ciencia-quimica-salud-doctor-trabajando-prueba-vuelta_42957-7451.jpg"
-                            class="img-fluid w-100" alt=""></div>
-                    <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;"
-                            src="https://media.istockphoto.com/id/1191463139/es/foto/cambiar-el-futuro-de-un-experimento-a-la-vez.jpg?s=612x612&w=0&k=20&c=G6alPIxPSbNNpvf1w-5lOW1hzBPBuavucJqGwq-RQrA="
-                            class="img-fluid w-100" alt=""></div>
-                </div>
-                <div class="row">
-                    <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;"
-                            src="https://sf.ezoiccdn.com/ezoimgfmt/expandetumente.com/wp-content/uploads/2021/06/Frases-Quimica-1024x683.jpg?ezimgfmt=rs:348x232/rscb44/ngcb44/notWebP"
-                            class="img-fluid w-100" alt=""></div>
-                    <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;"
-                            src="https://ieqfb.com/wp-content/uploads/estudiar-quimica.jpg" class="img-fluid w-100"
-                            alt=""></div>
-                    <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;"
-                            src="https://cards.algoreducation.com/_next/image?url=https%3A%2F%2Ffiles.algoreducation.com%2Fproduction-ts%2F__S3__85d3dd80-4e5e-4469-961c-a4b3a1814e27&w=3840&q=75"
-                            class="img-fluid w-100" alt=""></div>
-                </div>
-                <div class="row">
-                    <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;"
-                            src="https://www.repsol.com/content/dam/repsol-corporate/es/productos-y-servicios/cientificos-trabajando-laboratorio.jpg"
-                            class="img-fluid w-100" alt=""></div>
-                    <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;"
-                            src="https://ieqfb.com/wp-content/uploads/master-en-calidad-de-laboratorios.jpg"
-                            class="img-fluid w-100" alt=""></div>
-                    <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;"
-                            src="https://www.galileoequipos.com/blog/wp-content/uploads/2023/03/instrumentos-de-laboratorio-mas-importantes-1280x640.jpg"
-                            class="img-fluid w-100" alt=""></div>
-                </div>
-            </div>
-
-        </div>
-        <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
-            
-        </div>
-    </div>
-    <!-- fin seccion body  -->
-
-
-    <!-- boton con menu -->
-    <div class="btn-group">
-        <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown"
-            aria-expanded="false">
-            Small button
-        </button>
-        <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Profile</a></li>
-            <li><a class="dropdown-item" href="#">Accesibility</a></li>
-            <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
-            <li>
-                <hr class="dropdown-divider">
-            </li>
-            <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
-        </ul>
-    </div>
-
-    <!-- ventana emergente -->
-    <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
-        tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered">
+    <!-- Body -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Modal 1</h1>
+                    <h5 class="modal-title" id="exampleModalLabel">Create a new post</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    Show a second modal and hide this one with the button below.
+                    <h6>Caption:</h6>
+                    <textarea class="form-control" placeholder="Add the caption of your post here"
+                        id="floatingTextarea2"></textarea>
+                    <div class="row p-2">
+                        <button class="col-1 border rounded p-1 m-1 btn-light">
+                            <i class="fa-solid fa-camera"></i>
+                        </button>
+                        <button class="col-1 border rounded p-1 m-1 btn-light">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </button>
+                    </div>
                 </div>
                 <div class="modal-footer">
-                    <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Open
-                        second modal</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-success">Publish</button>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2"
-        tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Modal 2</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    Hide this modal and show the first with the button below.
-                </div>
-                <div class="modal-footer">
-                    <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Back to
-                        first</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Open first
-        modal</button>
     </div>
 
     <!-- Toggle Grid -->
@@ -178,7 +80,8 @@
         <ul class="nav nav-pill justify-content-center" id="myTab" role="tablist">
             <li class="nav-item" role="presentation">
                 <a class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button"
-                    role="tab" aria-controls="home" aria-selected="true"><i class="fa-solid fa-table-cells"></i></a>
+                    role="tab" aria-controls="home" aria-selected="true"><i
+                        class="fa-solid fa-table-cells"></i></a>
             </li>
             <li class="nav-item" role="presentation">
                 <a class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button"
@@ -186,17 +89,77 @@
             </li>
         </ul>
         <div class="tab-content" id="myTabContent">
-            <!-- 3 photos per row grid -->
 
+            <!-- 3 fotos por fila -->
+            <div class="tab-pane fade show active overflow-hidden" id="home" role="tabpanel" aria-labelledby="home-tab">
+                <div class="row">
+                    <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;" src="https://ieqfb.com/wp-content/uploads/estudiar-quimica.jpg" class="img-fluid w-100" alt=""></div>
+                    <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;" src="https://www.repsol.com/content/dam/repsol-corporate/es/productos-y-servicios/cientificos-trabajando-laboratorio.jpg" class="img-fluid w-100" alt=""></div>
+                    <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;" src="https://www.universia.net/content/dam/universia/imagenes/2022/07/carrera%20de%20qu%C3%ADmica.jpg" class="img-fluid w-100" alt=""></div>
+                </div>
+                <div class="row">
+                    <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;" src="https://static.manualdaquimica.com/2024/04/quimico-manipulando-vidrarias-de-laboratorio-uma-alusao-a-fisico-quimica.jpg" class="img-fluid w-100" alt=""></div>
+                    <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;" src="https://controllab.com/wp-content/uploads/fisico-quimica.jpg" class="img-fluid w-100" alt=""></div>
+                    <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;" src="https://www.zschimmer-schwarz.es/app/uploads/2020/06/_Se_puede_vivir_sin_qui__micos_.jpg" class="img-fluid w-100" alt=""></div>
+                </div>
+                <div class="row">
+                    <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;" src="https://www.smartfactorymagazine.es/upfiles/noticies_img/A_464057052.jpg" class="img-fluid w-100" alt=""></div>
+                    <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;" src="https://www.revistalimpiezas.es/wp-content/uploads/sites/4/2023/05/gettyimages-949947294.jpg" class="img-fluid w-100" alt=""></div>
+                    <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;" src="https://datos-bo.com/wp-content/uploads/2023/07/ciencia-1.jpg" class="img-fluid w-100" alt=""></div>
+                </div>
+            </div>
+            
+            <!-- 1 foto por fila -->
+            <div class="tab-pane fade overflow-hidden" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                <div class="row my-4">
+                    <div class="col-6 mx-auto border rounded p-0">
+                        <div class="d-flex p-2">
+                            <div class="w-100 fs-4">Chemistry assay</div>
+                            <small class="align-bottom">20/26</small>
+                        </div>
+                        <img style="object-fit: cover;" src="https://www.universia.net/content/dam/universia/imagenes/2022/07/carrera%20de%20qu%C3%ADmica.jpg" class="img-fluid w-100 col-12" alt=""/>
+                        <div class="p-2">
+                            <strong>254 Likes</strong>
+                            <p>This is an example of a very good photo that you can post on instagram</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row my-4">
+                    <div class="col-6 mx-auto border rounded p-0">
+                        <div class="d-flex p-2">
+                            <div class="w-100 fs-4">Biological test</div>
+                            <small>03/09</small>
+                        </div>
+                        <img style="object-fit: cover;" src="https://www.revistalimpiezas.es/wp-content/uploads/sites/4/2023/05/gettyimages-949947294.jpg" class="img-fluid w-100 col-12" alt=""/>
+                        <div class="p-2">
+                            <strong>269 Likes</strong>
+                            <p>This is an example of a very good photo that you can post on instagram</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row my-4">
+                    <div class="col-6 mx-auto border rounded p-0">
+                        <div class="d-flex p-2">
+                            <div class="w-100 fs-4">Laboratory</div>
+                            <small>09/10</small>
+                        </div>
+                        <img style="object-fit: cover;" src="https://ieqfb.com/wp-content/uploads/estudiar-quimica.jpg" class="img-fluid w-100 col-12" alt=""/>
+                        <div class="p-2">
+                            <strong>204 Likes</strong>
+                            <p>This is an example of a very good photo that you can post on instagram</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-            <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-                integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-                crossorigin="anonymous"></script>
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
-                integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
-                crossorigin="anonymous"></script>
-
-
+        <!-- Links para funcionalidades JS de Bootstrap -->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+            integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+            crossorigin="anonymous"></script>
 </body>
-
 </html>
